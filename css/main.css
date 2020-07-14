@@ -352,7 +352,8 @@ template {
 }
 
 body {
-  color: white;
+  background: white;
+  color: #048ca8;
   text-align: center;
 }
 
@@ -371,6 +372,16 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.lg-screen {
+  display: none;
+}
+
+.bg-primary {
+  background: #048ca8;
+  color: white;
+  padding: 5em 2.5em;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -403,6 +414,32 @@ h2 {
 .title-large {
   font-size: 3rem;
   font-weight: 900;
+  line-height: 1;
+}
+
+.title-box {
+  background: #d37cb4;
+  color: white;
+  margin: 0 auto;
+  padding: 1em;
+  transform: translateY(30%);
+  max-width: 90%;
+}
+
+@media (min-width: 495px) {
+  .title-box {
+    transform: translateY(50%);
+  }
+}
+
+.title-box + .bg-primary {
+  padding: 6em 2.5em 2.5em;
+}
+
+@media (min-width: 495px) {
+  .title-box + .bg-primary {
+    padding-top: 8em;
+  }
 }
 
 .grid {
@@ -436,10 +473,6 @@ h2 {
   color: white;
   padding-top: 10em;
   padding-bottom: 8em;
-}
-
-.hero-img {
-  display: none;
 }
 
 .main-nav {
@@ -528,7 +561,9 @@ h2 {
 }
 
 .sales-points {
-  padding: 10vh 0;
+  padding: 10vh 0 0;
+  background: white;
+  color: #048ca8;
 }
 
 .sales-points .sales-point {
