@@ -549,6 +549,17 @@ h2 {
   transition: all ease-in-out 250ms;
 }
 
+@media (min-width: 725px) {
+  .main-nav {
+    position: relative;
+    flex: auto;
+    background: none;
+    margin-top: 1em;
+    margin-left: 2em;
+    left: 0;
+  }
+}
+
 .main-nav ul {
   display: flex;
   flex-direction: column;
@@ -557,10 +568,25 @@ h2 {
   height: 100vh;
 }
 
+@media (min-width: 725px) {
+  .main-nav ul {
+    flex-direction: row;
+    height: auto;
+  }
+}
+
 .main-nav li {
   flex: 1 1 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   display: flex;
+}
+
+@media (min-width: 725px) {
+  .main-nav li {
+    display: inline-block;
+    border: none;
+    text-align: right;
+  }
 }
 
 .main-nav a {
@@ -572,8 +598,22 @@ h2 {
   justify-content: center;
 }
 
+@media (min-width: 725px) {
+  .main-nav a {
+    display: inline;
+    justify-content: flex-end;
+  }
+}
+
 .main-nav a:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 725px) {
+  .main-nav a:hover {
+    background: none;
+    color: #c04393;
+  }
 }
 
 .main-nav.is-open {
@@ -587,6 +627,12 @@ h2 {
   right: 1em;
   top: 1em;
   cursor: pointer;
+}
+
+@media (min-width: 725px) {
+  .nav-toggle {
+    display: none;
+  }
 }
 
 .hamburger, .hamburger::before, .hamburger::after {
@@ -623,6 +669,12 @@ h2 {
   padding-left: 7%;
   padding-top: 7.5em;
   padding-bottom: 7.5em;
+}
+
+.promo .img-box {
+  background: url(../img/?.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .sales-points {
@@ -664,10 +716,6 @@ footer::before {
   bottom: 0;
   right: 0;
   left: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.05;
 }
 
 footer a {
@@ -677,7 +725,6 @@ footer a {
 .nav-footer {
   display: flex;
   justify-content: space-around;
-  width: 80%;
   margin: 1em auto 0;
 }
 
@@ -686,6 +733,10 @@ footer a {
       text-decoration: none
       font-weight: bold
       */
+}
+
+.container-footer {
+  max-width: 25em;
 }
 
 .btn {
@@ -707,6 +758,7 @@ footer a {
 
 .btn--primary:hover, .btn--primary:focus {
   background: #c04393;
+  border-color: #c04393;
 }
 
 .btn--secondary {
@@ -727,4 +779,31 @@ footer a {
   background-position: center;
   padding: 5em 0;
   background-blend-mode: multiply;
+  position: relative;
+  overflow: hidden;
 }
+
+/* --- just rubbish - delete later ---
+  @media(min-width: 725px)
+    padding: 10em 0
+
+    &::before, &::after
+    content: ''
+    display: block
+    background: $accent
+    position: absolute
+    width: 100%
+    border: 1em solid $white
+
+    &::before
+      top: 0
+      bottom: 0
+      transform: skewX(50deg)
+      left: -100%
+
+    &::after
+      top: 0
+      bottom: 0
+      transform: skewX(50deg)
+      right: -100%
+    */
