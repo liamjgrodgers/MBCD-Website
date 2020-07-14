@@ -347,6 +347,40 @@ template {
   display: none;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 725px) {
+  .col:first-of-type {
+    padding-left: 0;
+  }
+  .col:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.col--full {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 725px) {
+  .col--1-3 {
+    flex-basis: 33.3333%;
+  }
+  .col--2-3 {
+    flex-basis: 66.6666%;
+  }
+  .col--1-2 {
+    flex-basis: 50%;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -376,6 +410,12 @@ img {
 
 .lg-screen {
   display: none;
+}
+
+@media (min-width: 725px) {
+  .lg-screen {
+    display: block;
+  }
 }
 
 .bg-primary {
@@ -448,7 +488,7 @@ h2 {
 }
 
 .title-box + .bg-primary {
-  padding: 6em 2.5em 2.5em;
+  padding: 6em;
 }
 
 @media (min-width: 495px) {
@@ -457,17 +497,10 @@ h2 {
   }
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col {
-  flex: 0 0 100%;
-}
-
-.col--full {
-  flex: 0 0 100%;
+@media (min-width: 725px) {
+  .title-box {
+    max-width: 700px;
+  }
 }
 
 .main-header {
@@ -486,8 +519,22 @@ h2 {
 .hero {
   background: linear-gradient(to right, #048ca8, #16db93);
   color: white;
-  padding-top: 10em;
+  padding-top: 8em;
   padding-bottom: 8em;
+  text-align: center;
+}
+
+@media (min-width: 725px) {
+  .hero {
+    text-align: left;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 725px) {
+  .hero-text {
+    margin-top: 10vmax;
+  }
 }
 
 .main-nav {
@@ -571,8 +618,11 @@ h2 {
   opacity: 0;
 }
 
-.promo {
-  padding: 10vh 0;
+.promo .bg-primary {
+  text-align: left;
+  padding-left: 7%;
+  padding-top: 7.5em;
+  padding-bottom: 7.5em;
 }
 
 .sales-points {
@@ -593,10 +643,31 @@ h2 {
   margin-bottom: 0;
 }
 
+@media (min-width: 725px) {
+  .sales-points .sales-point:first-of-type {
+    margin-top: 0;
+  }
+}
+
 footer {
   background: #323232;
   color: white;
   padding: 5em 0;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
 }
 
 footer a {
