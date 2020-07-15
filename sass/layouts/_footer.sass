@@ -1,37 +1,35 @@
-footer
+.footer
   background: $dark
   color: $text-inverse
   padding: 5em 0
   position: relative
 
   &::before
-    content: ''
-    display: block
+    //content: ''
+    display: inline-block
     position: absolute
     top: 0
     bottom: 0
     right: 0
     left: 0
-    //background: url(../img/logo.png)
-    //background-size: contain
-    //background-repeat: no-repeat
-    //background-position: center
-    //opacity: 0.05
 
   a
     color: $text-inverse
-
 
 .nav-footer
   display: flex
   justify-content: space-around
   margin: 1em auto 0
 
-  a
-    /*
-      text-decoration: none
-      font-weight: bold
-      */
+  //a
+    text-decoration: none
+    font-weight: bold
+
+  //&:hover
+    background: rgba(0,0,0,.10)
+    @media(min-width: 725px)
+      background: none
+      color: darken($blueish, 15%)
 
 .container-footer
   max-width: 25em
