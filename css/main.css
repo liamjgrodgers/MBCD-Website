@@ -27,7 +27,7 @@ html {
  */
 body {
   margin: 0;
-  background: #048ca8;
+  background: #323232;
 }
 
 /**
@@ -387,7 +387,7 @@ template {
 
 body {
   background: white;
-  color: #048ca8;
+  color: #323232;
   text-align: center;
 }
 
@@ -419,7 +419,7 @@ img {
 }
 
 .bg-primary {
-  background: #048ca8;
+  background: #323232;
   color: white;
   padding: 5em 2.5em;
 }
@@ -473,7 +473,7 @@ h2 {
 }
 
 .title-box {
-  background: #d37cb4;
+  background: #afafaf;
   color: white;
   margin: 0 auto;
   padding: 1em;
@@ -504,6 +504,7 @@ h2 {
 }
 
 .main-header {
+  background: #323232;
   position: absolute;
   top: 1em;
   left: 0;
@@ -514,10 +515,11 @@ h2 {
   width: 25%;
   min-width: 10rem;
   max-width: 15rem;
+  padding-top: .5em;
 }
 
 .hero {
-  background: linear-gradient(to right, #048ca8, #16db93);
+  background: linear-gradient(to right, #323232, #c8c8c8);
   color: white;
   padding-top: 8em;
   padding-bottom: 8em;
@@ -528,6 +530,8 @@ h2 {
   .hero {
     text-align: left;
     padding-bottom: 0;
+    height: 72vmin;
+    min-height: 500px;
   }
 }
 
@@ -538,7 +542,7 @@ h2 {
 }
 
 .main-nav {
-  background: #d37cb4;
+  background: #323232;
   position: absolute;
   top: 0;
   right: 0;
@@ -612,7 +616,7 @@ h2 {
 @media (min-width: 725px) {
   .main-nav a:hover {
     background: none;
-    color: #c04393;
+    color: #1067f8;
   }
 }
 
@@ -665,14 +669,20 @@ h2 {
 }
 
 .promo .bg-primary {
-  text-align: left;
+  text-align: Center;
   padding-left: 7%;
   padding-top: 7.5em;
   padding-bottom: 7.5em;
 }
 
+@media (min-width: 725px) {
+  .promo .bg-primary {
+    text-align: left;
+  }
+}
+
 .promo .img-box {
-  background: url(../img/?.jpg);
+  background: url(../img/dummy.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -680,7 +690,7 @@ h2 {
 .sales-points {
   padding: 10vh 0 0;
   background: white;
-  color: #048ca8;
+  color: #323232;
 }
 
 .sales-points .sales-point {
@@ -751,14 +761,14 @@ footer a {
 }
 
 .btn--primary {
-  background: #d37cb4;
+  background: #323232;
   color: white;
-  border: 2px solid #d37cb4;
+  border: 2px solid #323232;
 }
 
 .btn--primary:hover, .btn--primary:focus {
-  background: #c04393;
-  border-color: #c04393;
+  background: #0c0c0c;
+  border-color: #0c0c0c;
 }
 
 .btn--secondary {
@@ -768,11 +778,23 @@ footer a {
 
 .btn--secondary:hover, .btn--secondary:focus {
   background: white;
-  color: #048ca8;
+  color: #323232;
+}
+
+.btn--tertiary {
+  background: white;
+  border: 2px solid white;
+  color: #323232;
+}
+
+.btn--tertiary:hover, .btn--tertiary:focus {
+  background: #d9d9d9;
+  border-color: #d9d9d9;
+  color: #323232;
 }
 
 .cta {
-  background-color: #16db93;
+  background-color: #c8c8c8;
   color: white;
   background-image: url(../img/whiti.jpg);
   background-size: cover;
