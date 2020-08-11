@@ -1,0 +1,50 @@
+.contact
+  padding: 5em 2em
+
+  .contact-title
+    text-align: center
+    color: $blueish
+
+  form
+    display: flex
+    flex-direction: column
+
+    @supports (display: grid)
+      @media(min-width: 725px)
+        display: grid
+        grid-column-gap: 1em
+        grid-template-areas: "fname lname" "email email" "message message" "send ."
+
+        .fname
+          grid-area: fname
+        .lname
+          grid-area: lname
+        .email
+          grid-area: email
+        .message
+          grid-area: message
+        .button-form
+          grid-area: send
+
+  input, textarea
+    box-sizing: border-box
+    display: block
+    text-align: left
+    margin-top: 1em
+    padding: .5em .75em
+    background: lighten($light-grey, 20%)
+    border: 1px solid $dark
+    font-size: 1.2rem
+    width: auto
+
+  textarea
+    height: 8em
+
+  .button-form
+    display: inline-block
+    background: $blueish
+    border: none
+    margin-top: 1em
+    width: 30%
+    text-align: center
+    color: $text-inverse
