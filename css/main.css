@@ -1,11 +1,4 @@
-/*
-  $font-stack: 'name', font
-  */
-/*
-  @mixin font($weight)
-  font-family: $font-stack
-  font-weight: $weight
-  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -482,7 +475,7 @@ h2 {
 
 .title-large {
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -761,13 +754,9 @@ h2 {
 }
 
 .sales-points {
-  padding: 8vh 0 0;
+  padding: 6vh 0 0;
   background: white;
   color: #323232;
-}
-
-.sales-points .sales-point {
-  margin-bottom: 2.5em;
 }
 
 .sales-points .sales-point:first-of-type {
@@ -820,7 +809,7 @@ h2 {
 
 .contact .contact-title {
   text-align: center;
-  color: #5a96fa;
+  color: #323232;
 }
 
 .contact form {
@@ -851,7 +840,7 @@ h2 {
       grid-area: send;
     }
   }
-  @media (min-width: 725px) {
+  @media (min-width: 725px){
     .contact form .fname {
       -ms-grid-row: 1;
       -ms-grid-column: 1;
@@ -895,7 +884,7 @@ h2 {
 
 .contact .button-form {
   display: inline-block;
-  background: #5a96fa;
+  background: #323232;
   border: none;
   margin-top: 1em;
   width: 30%;
@@ -915,6 +904,7 @@ h2 {
 }
 
 .btn--primary {
+  font-family: "Open-sans", sans-serif;
   background: #323232;
   color: white;
   border: 2px solid #323232;
@@ -926,6 +916,7 @@ h2 {
 }
 
 .btn--secondary {
+  font-family: "Open-sans", sans-serif;
   border: 2px solid white;
   color: white;
 }
@@ -936,6 +927,7 @@ h2 {
 }
 
 .btn--tertiary {
+  font-family: "Open-sans", sans-serif;
   background: white;
   border: 2px solid white;
   color: #323232;
@@ -957,6 +949,15 @@ h2 {
   background-blend-mode: multiply;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 725px) {
+  .cta {
+    text-align: Center;
+    padding-bottom: 0;
+    height: 28vmin;
+    min-height: 300px;
+  }
 }
 
 /* --- just rubbish - delete later ---
