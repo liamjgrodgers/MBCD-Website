@@ -190,9 +190,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -200,9 +200,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -211,9 +211,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -263,8 +263,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -274,8 +274,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -283,7 +283,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -293,7 +293,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -348,7 +348,6 @@ template {
 .col {
   flex: 0 0 100%;
 }
-
 @media (min-width: 725px) {
   .col:first-of-type {
     padding-left: 0;
@@ -366,17 +365,19 @@ template {
   .col--1-4 {
     flex-basis: 25%;
   }
+
   .col--1-3 {
     flex-basis: 33.3333%;
   }
+
   .col--2-3 {
     flex-basis: 66.6666%;
   }
+
   .col--1-2 {
     flex-basis: 50%;
   }
 }
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -407,7 +408,6 @@ img {
 .lg-screen {
   display: none;
 }
-
 @media (min-width: 725px) {
   .lg-screen {
     display: block;
@@ -420,8 +420,41 @@ img {
   padding: 5em 2.5em;
 }
 
+.bg-gradient-right {
+  background: linear-gradient(to right, #969696, #c8c8c8);
+  color: white;
+  padding: 5em 2.5em;
+}
+
+.bg-gradient-mid {
+  background: linear-gradient(to right, #646464, #969696);
+  color: white;
+  padding: 5em 2.5em;
+}
+
+.bg-gradient-left {
+  background: linear-gradient(to right, #323232, #646464);
+  color: white;
+  padding: 5em 2.5em;
+}
+
+.service-img-pad {
+  text-align: center;
+  padding-top: 5em;
+  padding-left: 5em;
+}
+
+.showcase1 {
+  background: linear-gradient(to right, #323232, #c8c8c8);
+  padding-top: 10em;
+}
+
+.maps {
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6, p {
-  margin: 0 0 .75em;
+  margin: 0 0 0.75em;
 }
 
 h1:last-child, h2:last-child, h3:last-child,
@@ -436,9 +469,19 @@ h6 {
   line-height: 1.15;
 }
 
+h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 h4 {
   font-size: 2rem;
   font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 h1 {
@@ -459,14 +502,13 @@ h2 {
   letter-spacing: 3px;
   line-height: 1;
 }
-
 .title-footer::before, .title-footer::after {
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   background: white;
   opacity: 0.25;
-  margin: .75em 0;
+  margin: 0.75em 0;
 }
 
 .text-intro {
@@ -480,30 +522,26 @@ h2 {
 }
 
 .title-box {
-  background: #afafaf;
+  background: #7d7d7d;
   color: white;
   margin: 0 auto;
   padding: 1em;
   transform: translateY(30%);
   max-width: 90%;
 }
-
 @media (min-width: 495px) {
   .title-box {
     transform: translateY(50%);
   }
 }
-
 .title-box + .bg-primary {
   padding: 6em;
 }
-
 @media (min-width: 495px) {
   .title-box + .bg-primary {
     padding-top: 8em;
   }
 }
-
 @media (min-width: 725px) {
   .title-box {
     max-width: 700px;
@@ -522,7 +560,7 @@ h2 {
   width: 25%;
   min-width: 10rem;
   max-width: 15rem;
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
 .hero {
@@ -534,7 +572,6 @@ h2 {
   padding-bottom: 8em;
   text-align: center;
 }
-
 @media (min-width: 725px) {
   .hero {
     text-align: left;
@@ -547,7 +584,6 @@ h2 {
 .hero-text {
   margin-top: 5vmax;
 }
-
 @media (min-width: 725px) {
   .hero-text {
     margin-top: 10vmax;
@@ -557,11 +593,10 @@ h2 {
 .hero2 {
   background: linear-gradient(to right, #323232, #c8c8c8);
   color: white;
-  padding-top: 8em;
-  padding-bottom: 8em;
+  padding-top: 6em;
+  padding-bottom: 3em;
   text-align: center;
 }
-
 @media (min-width: 725px) {
   .hero2 {
     text-align: left;
@@ -572,12 +607,11 @@ h2 {
 }
 
 .hero2-text {
-  margin-top: 5vmax;
+  margin-top: 3vmax;
 }
-
 @media (min-width: 725px) {
   .hero2-text {
-    margin-top: 10vmax;
+    margin-top: 5vmax;
   }
 }
 
@@ -588,7 +622,6 @@ h2 {
   padding-bottom: 3em;
   text-align: center;
 }
-
 @media (min-width: 725px) {
   .intro {
     text-align: left;
@@ -599,7 +632,6 @@ h2 {
 .intro-text {
   margin-top: 1vmax;
 }
-
 @media (min-width: 725px) {
   .intro-text {
     margin-top: 1vmax;
@@ -617,7 +649,6 @@ h2 {
   overflow: hidden;
   transition: all ease-in-out 250ms;
 }
-
 @media (min-width: 725px) {
   .main-nav {
     position: relative;
@@ -628,7 +659,6 @@ h2 {
     left: 0;
   }
 }
-
 .main-nav ul {
   display: flex;
   flex-direction: column;
@@ -636,20 +666,17 @@ h2 {
   justify-content: space-around;
   height: 100vh;
 }
-
 @media (min-width: 725px) {
   .main-nav ul {
     flex-direction: row;
     height: auto;
   }
 }
-
 .main-nav li {
   flex: 1 1 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   display: flex;
 }
-
 @media (min-width: 725px) {
   .main-nav li {
     display: inline-block;
@@ -657,7 +684,6 @@ h2 {
     text-align: right;
   }
 }
-
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -666,25 +692,21 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-
 @media (min-width: 725px) {
   .main-nav a {
     display: inline;
     justify-content: flex-end;
   }
 }
-
 .main-nav a:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-
 @media (min-width: 725px) {
   .main-nav a:hover {
     background: none;
     color: #1067f8;
   }
 }
-
 .main-nav.is-open {
   left: 0;
 }
@@ -697,7 +719,6 @@ h2 {
   top: 1em;
   cursor: pointer;
 }
-
 @media (min-width: 725px) {
   .nav-toggle {
     display: none;
@@ -705,7 +726,7 @@ h2 {
 }
 
 .hamburger, .hamburger::before, .hamburger::after {
-  content: '';
+  content: "";
   display: block;
   width: 2em;
   height: 3px;
@@ -724,13 +745,92 @@ h2 {
 .hamburger.is-open {
   transform: rotate(45deg);
 }
-
 .hamburger.is-open::after {
   transform: rotate(-90deg) translateX(3px);
 }
-
 .hamburger.is-open::before {
   opacity: 0;
+}
+
+.services {
+  background: white;
+  padding-top: 5em;
+  padding-bottom: 2em;
+  text-align: center;
+  border-top: 20px solid #323232;
+  border-bottom: 10px solid #323232;
+}
+
+.service-nav {
+  background: #c8c8c8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 100%;
+  padding-top: 1em;
+  font-size: 1.8rem;
+  overflow: hidden;
+  transition: all ease-in-out 250ms;
+}
+@media (min-width: 725px) {
+  .service-nav {
+    position: relative;
+    flex: auto;
+    background: none;
+    margin-top: 1em;
+    left: 0;
+  }
+}
+.service-nav ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+@media (min-width: 725px) {
+  .service-nav ul {
+    flex-direction: row;
+    height: auto;
+  }
+}
+.service-nav li {
+  flex: 1 1 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+}
+@media (min-width: 725px) {
+  .service-nav li {
+    display: inline-block;
+    border: none;
+    text-align: center;
+  }
+}
+.service-nav a {
+  color: #323232;
+  text-decoration: none;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 725px) {
+  .service-nav a {
+    display: inline;
+    justify-content: flex-end;
+  }
+}
+.service-nav a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 725px) {
+  .service-nav a:hover {
+    background: none;
+    color: #1067f8;
+  }
+}
+.service-nav.is-open {
+  left: 0;
 }
 
 .promo .bg-primary {
@@ -739,13 +839,11 @@ h2 {
   padding-top: 7.5em;
   padding-bottom: 7.5em;
 }
-
 @media (min-width: 725px) {
   .promo .bg-primary {
     text-align: left;
   }
 }
-
 .promo .img-box {
   background: url(../img/Millen_Masonry.jpg);
   background-size: cover;
@@ -758,15 +856,12 @@ h2 {
   background: white;
   color: #323232;
 }
-
 .sales-points .sales-point:first-of-type {
   margin-top: 1.5em;
 }
-
 .sales-points .sales-point:last-child {
   margin-bottom: 0;
 }
-
 @media (min-width: 725px) {
   .sales-points .sales-point:first-of-type {
     margin-top: 0;
@@ -779,7 +874,6 @@ h2 {
   padding: 5em 0;
   position: relative;
 }
-
 .footer::before {
   display: inline-block;
   position: absolute;
@@ -788,7 +882,6 @@ h2 {
   right: 0;
   left: 0;
 }
-
 .footer a {
   color: white;
 }
@@ -806,17 +899,14 @@ h2 {
 .contact {
   padding: 5em 2em;
 }
-
 .contact .contact-title {
   text-align: center;
   color: #323232;
 }
-
 .contact form {
   display: flex;
   flex-direction: column;
 }
-
 @supports (display: grid) {
   @media (min-width: 725px) {
     .contact form {
@@ -865,23 +955,20 @@ h2 {
     }
   }
 }
-
 .contact input, .contact textarea {
   box-sizing: border-box;
   display: block;
   text-align: left;
   margin-top: 1em;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   background: #fbfbfb;
   border: 1px solid #323232;
   font-size: 1.2rem;
   width: auto;
 }
-
 .contact textarea {
   height: 8em;
 }
-
 .contact .button-form {
   display: inline-block;
   background: #323232;
@@ -891,16 +978,23 @@ h2 {
   text-align: center;
   color: white;
 }
+.contact .map {
+  margin-top: 3em;
+}
+@media (min-width: 725px) {
+  .contact .map {
+    margin-top: 0em;
+  }
+}
 
 .btn {
   display: inline-block;
-  padding: .75em 2.5em;
+  padding: 0.75em 2.5em;
   text-transform: uppercase;
   text-decoration: none;
 }
-
 .btn:not(:last-of-type) {
-  margin-bottom: .6em;
+  margin-bottom: 0.6em;
 }
 
 .btn--primary {
@@ -909,7 +1003,6 @@ h2 {
   color: white;
   border: 2px solid #323232;
 }
-
 .btn--primary:hover, .btn--primary:focus {
   background: #0c0c0c;
   border-color: #0c0c0c;
@@ -920,7 +1013,6 @@ h2 {
   border: 2px solid white;
   color: white;
 }
-
 .btn--secondary:hover, .btn--secondary:focus {
   background: white;
   color: #323232;
@@ -932,7 +1024,6 @@ h2 {
   border: 2px solid white;
   color: #323232;
 }
-
 .btn--tertiary:hover, .btn--tertiary:focus {
   background: #d9d9d9;
   border-color: #d9d9d9;
@@ -950,7 +1041,6 @@ h2 {
   position: relative;
   overflow: hidden;
 }
-
 @media (min-width: 725px) {
   .cta {
     text-align: Center;
@@ -961,26 +1051,26 @@ h2 {
 }
 
 /* --- just rubbish - delete later ---
-  @media(min-width: 725px)
-    padding: 10em 0
-
-    &::before, &::after
-    content: ''
-    display: block
-    background: $accent
-    position: absolute
-    width: 100%
-    border: 1em solid $white
-
-    &::before
-      top: 0
-      bottom: 0
-      transform: skewX(50deg)
-      left: -100%
-
-    &::after
-      top: 0
-      bottom: 0
-      transform: skewX(50deg)
-      right: -100%
-    */
+ * @media(min-width: 725px)
+ *  padding: 10em 0
+ *
+ *  &::before, &::after
+ *  content: ''
+ *  display: block
+ *  background: $accent
+ *  position: absolute
+ *  width: 100%
+ *  border: 1em solid $white
+ *
+ *  &::before
+ *    top: 0
+ *    bottom: 0
+ *    transform: skewX(50deg)
+ *    left: -100%
+ *
+ *  &::after
+ *    top: 0
+ *    bottom: 0
+ *    transform: skewX(50deg)
+ *    right: -100%
+ *  */
